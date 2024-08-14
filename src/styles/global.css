@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  background-color: #303030;
+  color: rgba(189, 189, 189, .6)
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
