@@ -1,5 +1,5 @@
 
-import { Browsers, Chat, GearSix, House, MonitorPlay, PlayCircle, Queue, Share, UserGear } from '@phosphor-icons/react'
+import { Chat, House, MonitorPlay, PlayCircle, Share } from '@phosphor-icons/react'
 import { createRootRoute, Link, Outlet, useRouterState } from '@tanstack/react-router'
 import { memo, useState } from 'react'
 
@@ -36,36 +36,16 @@ function RootRouteComponent() {
       url: '/shared-links'
     },
     {
-      name: 'Personal Information',
-      icon: <UserGear className='h-full w-[2rem]' weight="fill" />,
-      url: '/personal-info'
-    },
-    {
-      name: 'Pactto website',
-      icon: <Browsers className='h-full w-[2rem]' weight="fill" />,
-      url: '/profile'
-    },
-    {
       name: 'Reference video library',
       icon: <MonitorPlay className='h-full w-[2rem]' weight="fill" />,
       url: '/library'
-    },
-    {
-      name: 'Subscription',
-      icon: <Queue className='h-full w-[2rem]' weight="fill" />,
-      url: '/subscription'
-    },
-    {
-      name: 'Review Settings',
-      icon: <GearSix className='h-full w-[2rem]' weight="fill" />,
-      url: '/review-settings'
     },
   ]
 
   return (
     <>
       <div className='flex w-full'>
-        <nav className={`flex flex-col p-4 gap-2 h-[100vh] bg-[#424242] transition-all duration-150
+        <nav className={`flex flex-col p-4 gap-2 h-[100vh] bg-[#191d1f] transition-all duration-150
           ${open ? 'w-[17rem]' : 'w-[5rem]'}
           `}>
           <aside className='flex justify-around items-center mb-8'>
@@ -89,7 +69,6 @@ function RootRouteComponent() {
                     {route.name}
                   </span>
                 </div>
-
               </Link>
             ))}
           </>

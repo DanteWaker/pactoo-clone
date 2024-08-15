@@ -21,7 +21,6 @@ const SubscriptionLazyImport = createFileRoute('/subscription')()
 const SharedLinksLazyImport = createFileRoute('/shared-links')()
 const ReviewSettingsLazyImport = createFileRoute('/review-settings')()
 const ProfileLazyImport = createFileRoute('/profile')()
-const PersonalInfoLazyImport = createFileRoute('/personal-info')()
 const PacttosLazyImport = createFileRoute('/pacttos')()
 const LibraryLazyImport = createFileRoute('/library')()
 const IndexLazyImport = createFileRoute('/')()
@@ -49,11 +48,6 @@ const ProfileLazyRoute = ProfileLazyImport.update({
   path: '/profile',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/profile.lazy').then((d) => d.Route))
-
-const PersonalInfoLazyRoute = PersonalInfoLazyImport.update({
-  path: '/personal-info',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/personal-info.lazy').then((d) => d.Route))
 
 const PacttosLazyRoute = PacttosLazyImport.update({
   path: '/pacttos',
@@ -107,13 +101,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PacttosLazyImport
       parentRoute: typeof rootRoute
     }
-    '/personal-info': {
-      id: '/personal-info'
-      path: '/personal-info'
-      fullPath: '/personal-info'
-      preLoaderRoute: typeof PersonalInfoLazyImport
-      parentRoute: typeof rootRoute
-    }
     '/profile': {
       id: '/profile'
       path: '/profile'
@@ -152,7 +139,6 @@ export const routeTree = rootRoute.addChildren({
   VideosToReviewRoute,
   LibraryLazyRoute,
   PacttosLazyRoute,
-  PersonalInfoLazyRoute,
   ProfileLazyRoute,
   ReviewSettingsLazyRoute,
   SharedLinksLazyRoute,
@@ -171,7 +157,6 @@ export const routeTree = rootRoute.addChildren({
         "/videos-to-review",
         "/library",
         "/pacttos",
-        "/personal-info",
         "/profile",
         "/review-settings",
         "/shared-links",
@@ -189,9 +174,6 @@ export const routeTree = rootRoute.addChildren({
     },
     "/pacttos": {
       "filePath": "pacttos.lazy.tsx"
-    },
-    "/personal-info": {
-      "filePath": "personal-info.lazy.tsx"
     },
     "/profile": {
       "filePath": "profile.lazy.tsx"

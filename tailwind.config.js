@@ -9,13 +9,18 @@ module.exports = {
   ],
   prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
+		screens: {
+			'tablet': '640px',
+			// => @media (min-width: 640px) { ... }
+
+			'laptop': '1024px',
+			// => @media (min-width: 1024px) { ... }
+
+			'desktop': '1280px',
+			// => @media (min-width: 1280px) { ... }
+
+			'2kDesktop': '1536px',
+		},
     extend: {
       colors: {
         border: "hsl(var(--border))",

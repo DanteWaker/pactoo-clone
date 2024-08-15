@@ -21,7 +21,7 @@ export function Library() {
 
   return (
     <section className="w-full flex flex-col gap-8">
-      <div className="w-full flex justify-between items-center mb-12">
+      <div className="w-full flex flex-col justify-between items-start gap-8 mb-12 laptop:flex-row laptop:items-center">
         <h1 className="w-full text-4xl font-bold">Select a video</h1>
         <Button className=" P-2 rounded-full bg-[#24c4ae] hover:bg-[#1b645a] text-black flex justify-center items-center gap-2 h-[3rem]">
           <Plus />
