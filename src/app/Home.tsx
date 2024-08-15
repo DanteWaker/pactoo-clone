@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Plus } from "@phosphor-icons/react";
 import { useState } from "react";
@@ -17,7 +17,7 @@ function generateRandomList(size: number, min: number, max: number) {
 
 export function Home() {
 
-  const [searchValue, setSearchValue] = useState<string>("")
+  const [, setSearchValue] = useState<string>("")
 
   return (
     <section className="w-full flex flex-col gap-8">
