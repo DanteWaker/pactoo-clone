@@ -31,10 +31,11 @@ export function Home() {
       <Input type="search" id="search" placeholder="Search" className="h-[3rem] rounded-[4px]" onChange={(event) => setSearchValue(event.target.value)} />
       <div className=" flex flex-wrap gap-4 justify-between">
         {generateRandomList(16, 1, 3000).map((number) => (
+
           <Card key={number} className="min-w-[14rem] max-w-[20rem] flex-1">
             <img src="/teste.png" alt="" />
             <CardContent className="p-3">
-              <h1 className="text-lg">Card Content</h1>
+              <h1 className="text-lg">{number}</h1>
             </CardContent>
             <CardFooter className="p-3 text-xs">
               <p>Date: 08/12/24 6:07 pm</p>

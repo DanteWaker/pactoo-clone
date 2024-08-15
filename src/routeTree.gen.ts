@@ -23,7 +23,6 @@ const ReviewSettingsLazyImport = createFileRoute('/review-settings')()
 const ProfileLazyImport = createFileRoute('/profile')()
 const PersonalInfoLazyImport = createFileRoute('/personal-info')()
 const PacttosLazyImport = createFileRoute('/pacttos')()
-const PackagesLazyImport = createFileRoute('/packages')()
 const LibraryLazyImport = createFileRoute('/library')()
 const IndexLazyImport = createFileRoute('/')()
 
@@ -60,11 +59,6 @@ const PacttosLazyRoute = PacttosLazyImport.update({
   path: '/pacttos',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/pacttos.lazy').then((d) => d.Route))
-
-const PackagesLazyRoute = PackagesLazyImport.update({
-  path: '/packages',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/packages.lazy').then((d) => d.Route))
 
 const LibraryLazyRoute = LibraryLazyImport.update({
   path: '/library',
@@ -104,13 +98,6 @@ declare module '@tanstack/react-router' {
       path: '/library'
       fullPath: '/library'
       preLoaderRoute: typeof LibraryLazyImport
-      parentRoute: typeof rootRoute
-    }
-    '/packages': {
-      id: '/packages'
-      path: '/packages'
-      fullPath: '/packages'
-      preLoaderRoute: typeof PackagesLazyImport
       parentRoute: typeof rootRoute
     }
     '/pacttos': {
@@ -164,7 +151,6 @@ export const routeTree = rootRoute.addChildren({
   IndexLazyRoute,
   VideosToReviewRoute,
   LibraryLazyRoute,
-  PackagesLazyRoute,
   PacttosLazyRoute,
   PersonalInfoLazyRoute,
   ProfileLazyRoute,
@@ -184,7 +170,6 @@ export const routeTree = rootRoute.addChildren({
         "/",
         "/videos-to-review",
         "/library",
-        "/packages",
         "/pacttos",
         "/personal-info",
         "/profile",
@@ -201,9 +186,6 @@ export const routeTree = rootRoute.addChildren({
     },
     "/library": {
       "filePath": "library.lazy.tsx"
-    },
-    "/packages": {
-      "filePath": "packages.lazy.tsx"
     },
     "/pacttos": {
       "filePath": "pacttos.lazy.tsx"

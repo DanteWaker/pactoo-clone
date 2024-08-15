@@ -1,5 +1,5 @@
 
-import { Browsers, Chat, GearSix, House, MonitorPlay, Package, PlayCircle, Queue, Share, UserGear } from '@phosphor-icons/react'
+import { Browsers, Chat, GearSix, House, MonitorPlay, PlayCircle, Queue, Share, UserGear } from '@phosphor-icons/react'
 import { createRootRoute, Link, Outlet, useRouterState } from '@tanstack/react-router'
 import { memo, useState } from 'react'
 
@@ -41,11 +41,6 @@ function RootRouteComponent() {
       url: '/personal-info'
     },
     {
-      name: 'Review packages for sale',
-      icon: <Package className='h-full w-[2rem]' weight="fill" />,
-      url: '/packages'
-    },
-    {
       name: 'Pactto website',
       icon: <Browsers className='h-full w-[2rem]' weight="fill" />,
       url: '/profile'
@@ -74,7 +69,7 @@ function RootRouteComponent() {
           ${open ? 'w-[17rem]' : 'w-[5rem]'}
           `}>
           <aside className='flex justify-around items-center mb-8'>
-            <img src="/public/pactto-logo.svg" alt="Pactto logo" className={`w-[140px] h-[45px] ${!open && 'hidden'}`} />
+            <img src="/pactto-logo.svg" alt="Pactto logo" className={`w-[140px] h-[45px] ${!open && 'hidden'}`} />
             <button onClick={() => setOpen(prevState => !prevState)} className='relative flex flex-col justify-center items-center gap-1 w-[2rem] h-[2rem]'>
               <div className={`h-[5px] w-[2rem] rounded-full transition-all duration-150  bg-white ${open && 'absolute rotate-45'}`} />
               <div className={`h-[5px] w-[2rem] rounded-full transition-all duration-150 bg-white ${open && 'hidden'}`} />
