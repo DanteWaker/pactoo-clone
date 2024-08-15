@@ -35,14 +35,10 @@ Para rodar o projeto, clone o projeto em sua máquina local e rode localmente co
 - Foi clonado a tela principal
 - Menu lateral (melhorado)
 - Responsividade
-- Modo dark e light
-- Multi Linguagem
 - Caso dê tempo, será implementado um gerenciamento de estado para simular um backend, será usado redux
 
 
 
 ## 🛠 Habilidades
 Typescript, React, React Hook Form (poderia ser usado em outra aba), TailwindCSS, TanStack Router, Vite.
-
-Talvez use algumas tecnologias a mais, como Redux e i8n.
 
