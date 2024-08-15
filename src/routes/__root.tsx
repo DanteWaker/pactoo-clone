@@ -100,7 +100,7 @@ function RootRouteComponent() {
           </>
         </nav>
 
-        <main className='p-8 w-full'>
+        <main className='p-8 w-full h-[100vh] overflow-auto'>
           <Outlet />
         </main>
       </div>
