@@ -108,7 +108,7 @@ export function PersonalInfo() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Username" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                  <Input placeholder="Username" {...field} className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
@@ -120,7 +120,7 @@ export function PersonalInfo() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="Surname" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                  <Input placeholder="Surname" {...field} className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
@@ -132,7 +132,7 @@ export function PersonalInfo() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input placeholder="E-mail" type="email" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                  <Input placeholder="E-mail" type="email" {...field} className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
@@ -146,10 +146,10 @@ export function PersonalInfo() {
               <FormItem>
                 <FormControl>
                   <Select {...field}>
-                    <SelectTrigger className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]">
+                    <SelectTrigger className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg">
                       <SelectValue {...field} placeholder="Country" className=" bg-red-400" />
                     </SelectTrigger>
-                    <SelectContent  {...field} className="border-0 text-[#E7E7E7] text-xl bg-[#474649]">
+                    <SelectContent  {...field} className="border-0 text-secondary text-xl bg-inputBg">
                       {sortedCountries.map((country => (
                         <SelectItem value={country.cca2}>{country.name.common}</SelectItem>
                       )))}
@@ -168,7 +168,7 @@ export function PersonalInfo() {
             render={() => (
               <FormItem>
                 <div className="mb-4">
-                  <FormLabel className="text-[#E7E7E7] text-xl">What is your main activity? Or activities</FormLabel>
+                  <FormLabel className="text-secondary text-xl">What is your main activity? Or activities</FormLabel>
                 </div>
                 {items.map((item) => (
                   <FormField
@@ -179,7 +179,7 @@ export function PersonalInfo() {
                       return (
                         <FormItem
                           key={item.id}
-                          className="flex flex-row items-center justify-start space-x-3 space-y-0 text-[#E7E7E7]"
+                          className="flex flex-row items-center justify-start space-x-3 space-y-0 text-secondary"
                         >
                           <FormControl>
                             <Checkbox
@@ -214,10 +214,10 @@ export function PersonalInfo() {
             render={({ field }) => (
               <FormItem>
                 <div className="mb-4">
-                  <FormLabel className="text-[#E7E7E7] text-xl">User handle and password</FormLabel>
+                  <FormLabel className="text-secondary text-xl">User handle and password</FormLabel>
                 </div>
                 <FormControl>
-                  <Input placeholder="User" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                  <Input placeholder="User" {...field} className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
@@ -229,7 +229,7 @@ export function PersonalInfo() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="password"  {...field} placeholder="Password" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                  <Input type="password"  {...field} placeholder="Password" {...field} className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
@@ -242,7 +242,7 @@ export function PersonalInfo() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="password"  {...field} placeholder="Confirm Password" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                  <Input type="password"  {...field} placeholder="Confirm Password" {...field} className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>

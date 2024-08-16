@@ -28,12 +28,13 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "#191d1f",
+        inputBg: "#474649",
         primary: {
           DEFAULT: "#24c4ae",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "#E7E7E7",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {

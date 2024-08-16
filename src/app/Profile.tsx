@@ -69,10 +69,10 @@ export function Profile() {
               render={({ field }) => (
                 <FormItem>
                   <div className="mb-4">
-                    <FormLabel className="text-[#E7E7E7] text-xl">Hero</FormLabel>
+                    <FormLabel className="text-secondary text-xl">Hero</FormLabel>
                   </div>
                   <FormControl>
-                    <Input placeholder="Name" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                    <Input placeholder="Name" {...field} className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                   </FormControl>
                   <FormMessage className="text-red-400" />
                 </FormItem>
@@ -84,7 +84,7 @@ export function Profile() {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="Headline" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                    <Input placeholder="Headline" {...field} className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                   </FormControl>
                   <FormMessage className="text-red-400" />
                 </FormItem>
@@ -97,10 +97,10 @@ export function Profile() {
               render={({ field }) => (
                 <FormItem className="mb-8">
                   <div className="mb-4">
-                    <FormLabel className="text-[#E7E7E7] text-xl">About Me</FormLabel>
+                    <FormLabel className="text-secondary text-xl">About Me</FormLabel>
                   </div>
                   <FormControl>
-                    <Textarea placeholder="About Me" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                    <Textarea placeholder="About Me" {...field} className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                   </FormControl>
                   <FormMessage className="text-red-400" />
                 </FormItem>
@@ -112,7 +112,7 @@ export function Profile() {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input type="text"  {...field} placeholder="Expertise Title" className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                    <Input type="text"  {...field} placeholder="Expertise Title" className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                   </FormControl>
                   <FormMessage className="text-red-400" />
                 </FormItem>
@@ -125,7 +125,7 @@ export function Profile() {
               render={({ field }) => (
                 <FormItem className="mb-8">
                   <FormControl>
-                    <Input type="text"  {...field} placeholder="Expertise 1" className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                    <Input type="text"  {...field} placeholder="Expertise 1" className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                   </FormControl>
                   <FormMessage className="text-red-400" />
                 </FormItem>
@@ -138,7 +138,7 @@ export function Profile() {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input type="text"  {...field} placeholder="Awards Title" className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                    <Input type="text"  {...field} placeholder="Awards Title" className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                   </FormControl>
                   <FormMessage className="text-red-400" />
                 </FormItem>
@@ -151,7 +151,7 @@ export function Profile() {
               render={({ field }) => (
                 <FormItem className="mb-8">
                   <FormControl>
-                    <Input type="text"  {...field} placeholder="Award 1" className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                    <Input type="text"  {...field} placeholder="Award 1" className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                   </FormControl>
                   <FormMessage className="text-red-400" />
                 </FormItem>
@@ -164,10 +164,10 @@ export function Profile() {
               render={({ field }) => (
                 <FormItem className="mb-8">
                   <div className="mb-4">
-                    <FormLabel className="text-[#E7E7E7] text-xl">Give me a follow</FormLabel>
+                    <FormLabel className="text-secondary text-xl">Give me a follow</FormLabel>
                   </div>
                   <FormControl>
-                    <Input type="text"  {...field} placeholder="Add social media channel" className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                    <Input type="text"  {...field} placeholder="Add social media channel" className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                   </FormControl>
                   <FormMessage className="text-red-400" />
                 </FormItem>
@@ -180,10 +180,10 @@ export function Profile() {
               render={({ field }) => (
                 <FormItem className="mb-8">
                   <div className="mb-4">
-                    <FormLabel className="text-[#E7E7E7] text-xl">YouTube Video</FormLabel>
+                    <FormLabel className="text-secondary text-xl">YouTube Video</FormLabel>
                   </div>
                   <FormControl>
-                    <Input type="text"  {...field} placeholder="YouTube video URL" className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                    <Input type="text"  {...field} placeholder="YouTube video URL" className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                   </FormControl>
                   <FormMessage className="text-red-400" />
                 </FormItem>
@@ -196,10 +196,10 @@ export function Profile() {
               render={({ field }) => (
                 <FormItem>
                   <div className="mb-4">
-                    <FormLabel className="text-[#E7E7E7] text-xl">Footer</FormLabel>
+                    <FormLabel className="text-secondary text-xl">Footer</FormLabel>
                   </div>
                   <FormControl>
-                    <Textarea placeholder="Quote" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                    <Textarea placeholder="Quote" {...field} className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                   </FormControl>
                   <FormMessage className="text-red-400" />
                 </FormItem>
@@ -211,7 +211,7 @@ export function Profile() {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input placeholder="Quote Author" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                    <Input placeholder="Quote Author" {...field} className="h-[2.6rem] border-0 text-secondary text-xl bg-inputBg" />
                   </FormControl>
                   <FormMessage className="text-red-400" />
                 </FormItem>
@@ -222,7 +222,7 @@ export function Profile() {
           </div>
           <aside className="flex-1">
             <div className="mb-4">
-              <FormLabel className="text-[#E7E7E7] text-xl">Avatar</FormLabel>
+              <FormLabel className="text-secondary text-xl">Avatar</FormLabel>
             </div>
 
             <div className="w-full flex justify-center bg-[#1C1B1E] p-8 mb-8">
@@ -233,7 +233,7 @@ export function Profile() {
             </div>
 
             <div className="mb-4">
-              <FormLabel className="text-[#E7E7E7] text-xl">Carousel</FormLabel>
+              <FormLabel className="text-secondary text-xl">Carousel</FormLabel>
             </div>
             <Button className="rbg-primary hover:bg-[#1b645a]">
               <Plus />

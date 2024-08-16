@@ -41,7 +41,8 @@ export function Home() {
               <CardFooter className="p-3 text-xs">
                 <p>Date: 08/12/24 6:07 pm</p>
               </CardFooter>
-            </Card>))}
+            </Card>
+          ))}
         </div>
       </div>
 
