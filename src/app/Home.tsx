@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/inputSearch";
 import { Plus } from "@phosphor-icons/react";
 import { useState } from "react";
 
@@ -28,19 +28,41 @@ export function Home() {
           UPLOAD NEW VIDEO
         </Button>
       </div>
-      <Input type="search" id="search" placeholder="Search" className="h-[3rem] rounded-[4px]" onChange={(event) => setSearchValue(event.target.value)} />
-      <div className=" flex flex-wrap gap-4 justify-between">
-        {generateRandomList(16, 1, 3000).map((number) => (
+      <div className="flex flex-col gap-8">
+        <Input type="search" id="search" placeholder="Search" className="h-[3.5rem] rounded-[4px] text-xl" onChange={(event) => setSearchValue(event.target.value)} />
+        <div className=" flex flex-wrap gap-4 justify-between">
+          {generateRandomList(11, 1, 3000).map((number) => (
 
-          <Card key={number} className="min-w-[14rem] max-w-[20rem] flex-1">
-            <img src="/teste.png" alt="" />
-            <CardContent className="p-3">
-              <h1 className="text-lg">{number}</h1>
-            </CardContent>
-            <CardFooter className="p-3 text-xs">
-              <p>Date: 08/12/24 6:07 pm</p>
-            </CardFooter>
-          </Card>))}
+            <Card key={number} className="min-w-[14rem] max-w-[20rem] flex-1">
+              <img src="/teste.png" alt="" />
+              <CardContent className="p-3">
+                <h1 className="text-lg">{number}</h1>
+              </CardContent>
+              <CardFooter className="p-3 text-xs">
+                <p>Date: 08/12/24 6:07 pm</p>
+              </CardFooter>
+            </Card>))}
+        </div>
+      </div>
+
+      <div className="w-full flex flex-col justify-between items-start gap-8 mb-8 laptop:flex-row laptop:items-center mt-16">
+        <h1 className="w-full text-4xl font-bold">Reviews by me</h1>
+      </div>
+      <div className="flex flex-col gap-8">
+        <Input type="search" id="search" placeholder="Search" className="h-[3.5rem] rounded-[4px] text-xl" onChange={(event) => setSearchValue(event.target.value)} />
+        <div className=" flex flex-wrap gap-4 justify-between">
+          {generateRandomList(3, 1, 3000).map((number) => (
+
+            <Card key={number} className="min-w-[14rem] max-w-[20rem] flex-1">
+              <img src="/teste.png" alt="" />
+              <CardContent className="p-3">
+                <h1 className="text-lg">{number}</h1>
+              </CardContent>
+              <CardFooter className="p-3 text-xs">
+                <p>Date: 08/12/24 6:07 pm</p>
+              </CardFooter>
+            </Card>))}
+        </div>
       </div>
 
     </section>

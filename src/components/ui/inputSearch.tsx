@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
+import { MagnifyingGlass } from "@phosphor-icons/react"
 
 export type InputProps = React.InputHTMLAttributes<HTMLInputElement>
 
@@ -20,6 +21,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           {...props}
         />
+        <MagnifyingGlass className="h-[1.6rem] w-[1.6rem] mr-6" />
       </div>
     )
   }

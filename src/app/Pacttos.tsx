@@ -1,4 +1,4 @@
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/inputSearch";
 import { useState } from "react";
 
 
@@ -12,7 +12,7 @@ export function Pacttos() {
       <div className="w-full flex justify-between items-center mb-12">
         <h1 className="w-full text-4xl font-bold">Pacttos (Chats)</h1>
       </div>
-      <Input type="search" id="search" placeholder="Search" className="h-[3rem] rounded-[4px]" onChange={(event) => setSearchValue(event.target.value)} />
+      <Input type="search" id="search" placeholder="Search" className="h-[3.5rem] rounded-[4px] text-xl" onChange={(event) => setSearchValue(event.target.value)} />
 
     </section>
   )

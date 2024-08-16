@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/inputSearch";
 import { Plus } from "@phosphor-icons/react";
 import { useState } from "react";
 
@@ -30,7 +30,7 @@ export function Library() {
       </div>
       <div>
         <p className="mb-4">Videos uploaded to the reference video library can be used in side-by-side comparisons, or can be shared with learners directly.</p>
-        <Input type="search" id="search" placeholder="Search" className="h-[3rem] rounded-[4px]" onChange={(event) => setSearchValue(event.target.value)} />
+        <Input type="search" id="search" placeholder="Search" className="h-[3.5rem] rounded-[4px] text-xl" onChange={(event) => setSearchValue(event.target.value)} />
       </div>
       <div className=" flex flex-wrap gap-4 justify-between">
         {generateRandomList(4, 1, 3000).map((number) => (
