@@ -70,7 +70,7 @@ function RootRouteComponent() {
   return (
     <>
       <div className='flex w-full'>
-        <nav className={`flex flex-col px-4 py-8 gap-2 h-[100vh] bg-[#191d1f] transition-all duration-150
+        <nav className={`flex flex-col px-4 py-8 gap-2 h-[100vh] bg-foreground transition-all duration-150
           ${open ? 'w-[17rem]' : 'w-[5rem]'}
           `}>
           <aside className='flex justify-around items-center mb-8'>

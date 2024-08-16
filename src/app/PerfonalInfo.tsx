@@ -93,10 +93,10 @@ export function PersonalInfo() {
 
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full flex flex-col gap-8" >
         <div className="w-full flex flex-col justify-end items-start gap-4 mb-12 laptop:flex-row laptop:items-center">
-          <Button className="p-4 px-8 rounded-full transition-all duration-200 bg-[#B8B8B8] hover:bg-[#aaa9a9] text-black flex justify-center items-center gap-2 h-[3rem]">
+          <Button className="bg-[#B8B8B8] hover:bg-[#aaa9a9] text-black">
             RESET CHANGES
           </Button>
-          <Button type="submit" className="p-4 px-8 rounded-full transition-all duration-300 bg-[#24c4ae] hover:bg-[#1b645a] text-black flex justify-center items-center gap-2 h-[3rem]">
+          <Button type="submit" className=" bg-primary hover:bg-[#1b645a]">
             SAVE CHANGES
           </Button>
         </div>
@@ -145,11 +145,11 @@ export function PersonalInfo() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Select>
+                  <Select {...field}>
                     <SelectTrigger className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]">
                       <SelectValue {...field} placeholder="Country" className=" bg-red-400" />
                     </SelectTrigger>
-                    <SelectContent className="border-0 text-[#E7E7E7] text-xl bg-[#474649]">
+                    <SelectContent  {...field} className="border-0 text-[#E7E7E7] text-xl bg-[#474649]">
                       {sortedCountries.map((country => (
                         <SelectItem value={country.cca2}>{country.name.common}</SelectItem>
                       )))}
@@ -184,6 +184,7 @@ export function PersonalInfo() {
                           <FormControl>
                             <Checkbox
                               checked={field.value?.includes(item.id)}
+                              {...field}
                               onCheckedChange={(checked) => {
                                 return checked
                                   ? field.onChange([...field.value, item.id])
@@ -203,7 +204,6 @@ export function PersonalInfo() {
                     }}
                   />
                 ))}
-                <FormMessage />
               </FormItem>
             )}
           />
@@ -213,6 +213,9 @@ export function PersonalInfo() {
             name="user"
             render={({ field }) => (
               <FormItem>
+                <div className="mb-4">
+                  <FormLabel className="text-[#E7E7E7] text-xl">User handle and password</FormLabel>
+                </div>
                 <FormControl>
                   <Input placeholder="User" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
                 </FormControl>
@@ -226,7 +229,7 @@ export function PersonalInfo() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="password" placeholder="Password" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                  <Input type="password"  {...field} placeholder="Password" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
@@ -239,7 +242,7 @@ export function PersonalInfo() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="password" placeholder="Confirm Password" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
+                  <Input type="password"  {...field} placeholder="Confirm Password" {...field} className="h-[2.6rem] border-0 text-[#E7E7E7] text-xl bg-[#474649]" />
                 </FormControl>
                 <FormMessage className="text-red-400" />
               </FormItem>
