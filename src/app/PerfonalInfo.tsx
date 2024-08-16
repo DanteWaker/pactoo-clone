@@ -49,7 +49,7 @@ const formSchema = z.object({
   surname: z.string().min(4).max(50),
   email: z.string().email(),
   country: z.string(),
-  mainActivity: z.string(),
+  mainActivity: z.any(),
   user: z.string(),
   password: z.string(),
   passwordConfirm: z.string(),
