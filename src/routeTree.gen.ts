@@ -20,7 +20,6 @@ import { Route as PersonalInfoImport } from './routes/personal-info'
 
 const SubscriptionLazyImport = createFileRoute('/subscription')()
 const SharedLinksLazyImport = createFileRoute('/shared-links')()
-const ReviewSettingsLazyImport = createFileRoute('/review-settings')()
 const ProfileLazyImport = createFileRoute('/profile')()
 const PacttosLazyImport = createFileRoute('/pacttos')()
 const LibraryLazyImport = createFileRoute('/library')()
@@ -37,13 +36,6 @@ const SharedLinksLazyRoute = SharedLinksLazyImport.update({
   path: '/shared-links',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/shared-links.lazy').then((d) => d.Route))
-
-const ReviewSettingsLazyRoute = ReviewSettingsLazyImport.update({
-  path: '/review-settings',
-  getParentRoute: () => rootRoute,
-} as any).lazy(() =>
-  import('./routes/review-settings.lazy').then((d) => d.Route),
-)
 
 const ProfileLazyRoute = ProfileLazyImport.update({
   path: '/profile',
@@ -121,13 +113,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProfileLazyImport
       parentRoute: typeof rootRoute
     }
-    '/review-settings': {
-      id: '/review-settings'
-      path: '/review-settings'
-      fullPath: '/review-settings'
-      preLoaderRoute: typeof ReviewSettingsLazyImport
-      parentRoute: typeof rootRoute
-    }
     '/shared-links': {
       id: '/shared-links'
       path: '/shared-links'
@@ -154,7 +139,6 @@ export const routeTree = rootRoute.addChildren({
   LibraryLazyRoute,
   PacttosLazyRoute,
   ProfileLazyRoute,
-  ReviewSettingsLazyRoute,
   SharedLinksLazyRoute,
   SubscriptionLazyRoute,
 })
@@ -173,7 +157,6 @@ export const routeTree = rootRoute.addChildren({
         "/library",
         "/pacttos",
         "/profile",
-        "/review-settings",
         "/shared-links",
         "/subscription"
       ]
@@ -195,9 +178,6 @@ export const routeTree = rootRoute.addChildren({
     },
     "/profile": {
       "filePath": "profile.lazy.tsx"
-    },
-    "/review-settings": {
-      "filePath": "review-settings.lazy.tsx"
     },
     "/shared-links": {
       "filePath": "shared-links.lazy.tsx"

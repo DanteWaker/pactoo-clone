@@ -1,5 +1,5 @@
 
-import { Browsers, Chat, GearSix, House, MonitorPlay, Package, PlayCircle, Queue, Share, UserGear } from '@phosphor-icons/react'
+import { Browsers, Chat, House, MonitorPlay, PlayCircle, Queue, Share, UserGear } from '@phosphor-icons/react'
 import { createRootRoute, Link, Outlet, useRouterState } from '@tanstack/react-router'
 import { memo, useState } from 'react'
 
@@ -41,11 +41,6 @@ function RootRouteComponent() {
       url: '/personal-info'
     },
     {
-      name: 'Review packages for sale',
-      icon: <Package className='h-full w-[2rem]' weight="fill" />,
-      url: '/packages'
-    },
-    {
       name: 'Pactto website',
       icon: <Browsers className='h-full w-[2rem]' weight="fill" />,
       url: '/profile'
@@ -59,11 +54,6 @@ function RootRouteComponent() {
       name: 'Subscription',
       icon: <Queue className='h-full w-[2rem]' weight="fill" />,
       url: '/subscription'
-    },
-    {
-      name: 'Review Settings',
-      icon: <GearSix className='h-full w-[2rem]' weight="fill" />,
-      url: '/review-settings'
     },
   ]
 

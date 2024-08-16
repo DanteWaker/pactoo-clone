@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { features } from "@/utils/data";
-import { Plus } from "@phosphor-icons/react";
 import { CheckFat } from "@phosphor-icons/react/dist/ssr";
 
 
