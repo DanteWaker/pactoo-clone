@@ -1,7 +1,7 @@
 
 # Clone do site da Pactto
 
-Site desenvolvido para o processo seletivo da empresa Pactto, todo código desenvolvido foi feito baseado no visual do site original, e nada do código pode ser usado tanto pela empresa quanto por terceiros, veja a Licensa.
+Site desenvolvido para o processo seletivo da empresa Pactto, uma empresa genérica que avaliou o código e deu um feedback genérico sem ao menos justificar as escolhas, isso apenas depois de entrar em contato com ela. Todo código desenvolvido foi feito baseado no visual do site original, e nada do código pode ser usado tanto pela empresa quanto por terceiros, veja a Licensa.
 
 
 ## Website
